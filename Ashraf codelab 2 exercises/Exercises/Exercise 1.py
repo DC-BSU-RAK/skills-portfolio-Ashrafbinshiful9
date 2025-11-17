@@ -26,7 +26,7 @@ def quiz_results(score):
 def load_image(path):
     """Load an image from file for Tkinter"""
     img = Image.open(path)  # open image
-    return ImageTk.PhotoImage(img)  # convert to Tkinter-friendly format
+    return ImageTk.PhotoImage(img)  
 
 # Tkinter Setup
 root = Tk()
