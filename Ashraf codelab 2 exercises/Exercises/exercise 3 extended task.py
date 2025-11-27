@@ -10,7 +10,7 @@ BACKGROUND_IMAGE = r"C:\Users\Ashraf Bin Shiful\OneDrive\Desktop\Ashraf codelab 
 root = Tk()  # creating main window
 root.title("Student Records Manager - Ashraf")  # window title
 root.geometry("1000x700")  # set window size
-root.resizable(False, False)  # can't resize window
+root.resizable(False, False)  
 
 #  Colors and Theme 
 BUTTON_BG = "#F1E3C9"  # button background color
@@ -51,7 +51,7 @@ def calc_grade(percentage):
     elif percentage >= 40:
         return "D"
     else:
-        return "F"  # classic grading system
+        return "F"  
 
 # File Handling 
 def load_students(file_path):
@@ -63,7 +63,7 @@ def load_students(file_path):
                 line = line.strip()  # remove extra spaces
                 if not line:  # skip empty lines
                     continue
-                parts = line.split(",")  # split by comma
+                parts = line.split(",")  
                 if len(parts) < 6:  # check if line has all info
                     continue
                 try:
@@ -144,7 +144,7 @@ def display_students(student_list):
 
 #  Form Frame 
 form_frame = Frame(root, bg=BUTTON_BG, bd=2, relief=RAISED)  # form for add/update/search
-form_frame.place_forget()  # hide initially
+form_frame.place_forget()  
 
 def clear_form():
     """Clear all widgets in the form"""
@@ -172,8 +172,8 @@ def lowest_action():
 
 # Add Student
 def add_action():
-    clear_form()  # clear old form
-    form_frame.place(x=200, y=105, width=760, height=300)  # show form
+    clear_form()  
+    form_frame.place(x=200, y=105, width=760, height=300)  
     labels = ["ID", "Name", "Coursework1", "Coursework2", "Coursework3", "Exam"]
     entries = []
 
